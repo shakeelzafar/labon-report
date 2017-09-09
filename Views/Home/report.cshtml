@@ -127,7 +127,7 @@
                     string iString = salesObj.First(x => x.Key.Equals("DocumentDate")).Value.ToString();
                     DateTime d = Convert.ToDateTime(iString);
                     String day = d.Day.ToString().Length < 2 ? "0" + d.Day.ToString() : d.Day.ToString();
-                    String actualDate = day + "-" + Months[int.Parse(d.Month.ToString()) - 1] + "-" + d.Year.ToString();
+                    String actualDate = day + "-" + Months[int.Parse(d.Month.ToString()) - 1] + " - " + d.Year.ToString();
                   
                     //String actualDate2="";
                     //iString = salesObj.First(x => x.Key.Equals("SalesOrderCustomOrderDate1")).Value.ToString();
