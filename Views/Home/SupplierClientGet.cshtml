@@ -1,5 +1,10 @@
 ﻿@{
     Layout = null;
+    List<Dictionary<string, object>> SalesOrders = (List<Dictionary<string, object>>)Session["SalesOrders"];
+    List<Dictionary<string, object>> PurchaseOrders = (List<Dictionary<string, object>>)Session["PurchaseOrders"];
+    List<Dictionary<string, object>> WorkOrders = (List<Dictionary<string, object>>)Session["WorkOrders"];
+    //List<Dictionary<string, object>> Products = (List<Dictionary<string, object>>)Session["Products"];
+    List<Dictionary<string, object>> SupplierClients = (List<Dictionary<string, object>>)Session["SupplierClients"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +63,10 @@
 
 <body>
  
-   
+   <p>@SalesOrders.Count() SalesOrders Loaded.</p>
+    <p>@WorkOrders.Count() WorkOrders Loaded.</p>
+    <p>@SupplierClients.Count() SupplierClients Loaded.</p>
+  
     <div id="content">
         <h3 style="margin-top:10%" class="col-lg-5 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 form-signin-heading">Please enter your APIKEY and Generate Report.</h3>
         <div class="col-lg-3 col-lg-offset-5 col-md-3 col-md-offset-5 col-sm-3 col-sm-offset-5">
